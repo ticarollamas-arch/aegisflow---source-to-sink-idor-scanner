@@ -1,0 +1,12 @@
+{
+  "python": {
+    "sources": ["id", "user_id", "item_id", "account_id", "uuid", "pk"],
+    "sinks": ["execute", "filter", "get", "delete", "update", "first", "find", "query"],
+    "sanitizers": ["check_owner", "current_user", "authorize", "verify_access", "has_permission"]
+  },
+  "nodejs": {
+    "sources": ["req.params", "req.query", "req.body"],
+    "sinks": ["findUnique", "findOne", "query", "deleteMany", "update", "destroy", "where"],
+    "sanitizers": ["checkPermission", "isOwner", "req.user.id", "validateOwnership", "ensureAccess"]
+  }
+}
